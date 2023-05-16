@@ -68,7 +68,7 @@ public:
         fb_h.push_back(x);
         fb_r.push_back(z);
         fb_l.push_back(y);
-        ok[make_pair(x,z)][y]=1;    // 查找<h,r>对应的[t]是否存在
+        ok[make_pair(x,z)][y]=1;    // 查找<h,r>对应的[t]是否存在. 保证负样本采样一个随机t后，对应的样本(h,r,t)存在,是强负样本
     }
 
     void run(int n_in,double rate_in,double margin_in,int method_in)
